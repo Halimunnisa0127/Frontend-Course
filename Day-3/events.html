@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+  <style>
+    body {
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    .college-name-logo {
+      position: relative;
+      top: -9px;
+    }
+
+    .side-toggler-icon {
+
+      font-size: small;
+    }
+
+    .col {
+      justify-items: center;
+      border: 1px solid black;
+      background-color: rgb(65, 63, 63);
+      color: white;
+      padding-bottom: 5px;
+
+    }
+
+    .student-reg-form {
+      padding-top: 50px;
+      text-align: center;
+    }
+
+    .event-images img {
+      height: 400px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .caltural-img {
+      height: 400px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .event-pictures-data {
+      display: flex;
+      gap: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="college-web-page w-100 m-0 p-0">
+    <nav class="navbar navbar-expand-lg border-bottom border-body" aria-label="Offcanvas navbar large ">
+      <div class="container-fluid">
+        <a class="navbar-brand college-name-logo fw-bold" href="#">
+          <img src="https://dnrcollege.org/en/wp-content/uploads/2019/02/about_DNR_Logo.jpg" alt="Logo" width="90"
+            height="90" class="d-inline-block" />
+          <h4 class="d-inline-flex text-primary text-shrink vw">MCA DEPARTMENT</h4>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+          aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon side-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-white mt-2" tabindex="-1" id="offcanvasNavbar2"
+          aria-labelledby="offcanvasNavbar2Label">
+          <div class="offcanvas-header ">
+            <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Offcanvas</h5>
+            <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body fs-4">
+            <ul class="navbar-nav justify-content-end  flex-grow-1 ">
+              <li class="nav-item ">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Register</a>
+              </li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- carousel images  -->
+    <h2 class="my-5 text-bold text-danger">Department Events</h2>
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner event-images">
+        <div class="carousel-item active">
+          <img src="https://dnrcollege.org/en/wp-content/uploads/2019/04/international-conference-201902-3-1024x306.jpg"
+            class="d-block" alt="technical events" />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://www.dnrlawcollege.in/images/30-Annual-Day-Celebrations-2019/5/30-Annual-Day-Celebrations-2019-021.jpg"
+            alt="caltural events" class="caltural-img" />
+        </div>
+        <div class="carousel-item">
+          <img src="https://dnrcet.org/web/wp-content/uploads/2024/01/banner4.jpg" class="d-block"
+            alt="Sports events" />
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- list of events  -->
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-sm-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title text-bold text-danger">Technical Events</h5>
+              <p class="card-text text-justify">Workshops, Coding Competitions, Paper Presentations,Technical Quiz,exhibitions
+                showcasing student projects.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title text-bold text-danger">Cultural Events</h5>
+              <p class="card-text text-justify">Dance Performances, Singing Competitions, Drama, Fashion Shows, Traditional Day
+                Celebrations.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-4">
+          <div class="card pb-4">
+            <div class="card-body">
+              <h5 class="card-title text-bold text-danger">Sports Events</h5>
+              <p class="card-text text-justify">Sports Day, Indoor & Outdoor Games, Fun Activities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- list of events and its pictures -->
+    <div class="container events">
+      <div class="row mb-5">
+        <div class="col-sm-4">
+          <div class="event-pictures-data my-5">
+            <div class="card pb-4">
+              <img src="https://www.osmecon.org/images/events/paper1.jpg" height="250px" class="card-img-top"
+                alt="Paper Presentations" />
+              <div class="card-body">
+                <h5 class="card-title text-danger">Paper Presentation</h5>
+                <p class="card-text text-justify">Students share their research findings in a formal setting, often with a panel of
+                  judges.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="event-pictures-data my-5">
+            <div class="card pb-4">
+              <img
+                src="https://www.hire-intelligence.co.uk/wp-content/uploads/2018/02/photo-1504384764586-bb4cdc1707b0.jpg"
+                height="250px" class="card-img-top" alt="Coding Competitions" />
+              <div class="card-body">
+                <h5 class="card-titlen text-danger">Coding Competition</h5>
+                <p class="card-text text-justify">Challenges where students compete to write the most efficient and innovative code.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="event-pictures-data my-5">
+            <div class="card">
+              <img
+                src="https://images.stockcake.com/public/0/8/4/0847c5d0-1732-4f80-9515-c861e73193f4_large/tech-workshop-scene-stockcake.jpg"
+                height="250px" class="card-img-top" alt="Workshops" />
+              <div class="card-body">
+                <h5 class="card-title text-danger">Workshops</h5>
+                <p class="card-text text-justify">Students design robots to compete in challenges like maze-solving and obstacle
+                  courses.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="event-pictures-data my-5">
+            <div class="card">
+              <img src="https://srisriuniversity.edu.in/wp-content/uploads/2020/12/ev9.jpg" height="250px"
+                class="card-img-top" alt="Dance Performances" />
+              <div class="card-body">
+                <h5 class="card-title text-danger">Dance Performance</h5>
+                <p class="card-text text-justify">Students learn and appreciate diverse cultural dance forms, fostering a sense of
+                  cultural pride and global awareness.
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="event-pictures-data my-5">
+            <div class="card ">
+              <img src="https://depaulcollege.in/wp-content/uploads/2021/11/IMG_3554-1024x683.jpg" height="250px"
+                class="card-img-top" alt="Singing Competitions" />
+              <div class="card-body">
+                <h5 class="card-title text-danger">Singing Competition</h5>
+                <p class="card-text text-justify">Singing competitions are a popular part of many college fests,showcase their vocal
+                  talents across genres.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="event-pictures-data my-5">
+            <div class="card">
+              <img
+                src="https://wwwstagnescollegeefecf3.zapwp.com/q:i/r:0/wp:0/w:1080/u:https://www.stagnescollege.edu.in/wp-content/uploads/2023/12/ftrd-st-agnes-ethnic-day-celebration-1080x675.jpg"
+                height="250px" class="card-img-top" alt="Traditional Day" />
+              <div class="card-body">
+                <h5 class="card-title text-danger">Traditional Day</h5>
+                <p class="card-text text-justify">These events celebrate festivals like Diwali and Holi through performances,
+                  cultural displays, and community activities. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="event-pictures-data my-5">
+            <div class="card">
+              <img
+                src="https://hindustaninternationalschools.in/wp-content/gallery/basketbal/Basketball-Tournament-4.jpg"
+                height="250px" class="card-img-top" alt="Basketball " />
+              <div class="card-body">
+                <h5 class="card-title text-danger">Basketball</h5>
+                <p class="card-text text-justify"> basketball championship tournaments provided an opportunity for students to
+                  showcase their intellectual and athletic talents.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="event-pictures-data my-5">
+            <div class="card">
+              <img src="https://suratcollege.metasofsda.in/event/big_img/mini_IMG_4372688.jpeg" class="card-img-top"
+                height="250px" alt="chess" />
+              <div class="card-body">
+                <h5 class="card-title text-danger">chess Competition</h5>
+                <p class="card-text text-justify">Open to all students with an interest in chess, regardless of skill level.
+                  It involves tactical planning and strategy to checkmate the opponent's king.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="event-pictures-data my-5">
+            <div class="card">
+              <img src="https://dnrcet.org/web/wp-content/uploads/2024/01/khokho.jpg" height="250px"
+                class="card-img-top" alt="khokho" />
+              <div class="card-body">
+                <h5 class="card-title text-danger">khokho</h5>
+                <p class="card-text text-justify">In college, Kho-Kho competitions include inter-collegiate tournaments,and club-level matches and promoting a well-rounded educational experience.
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Student registration form  -->
+    <div class="container bg-dark text-light p-5 my-5 w-100 rounded">
+      <h4 class="text-primary student-reg-form  text-center mb-4">Student Registration Form</h4>
+      <form>
+        <div class="row mb-3">
+          <div class="col-md-6 mb-3">
+            <input type="text" class="form-control" placeholder="First name">
+          </div>
+          <div class="col-md-6 mb-3">
+            <input type="text" class="form-control" placeholder="Last name">
+          </div>
+          <div class="col-md-6 mb-3">
+            <input type="text" class="form-control" placeholder="Class/Branch">
+          </div>
+          <div class="col-md-6 mb-3">
+            <select class="form-select">
+              <option selected>Open this select menu</option>
+              <option value="1">Technical Events</option>
+              <option value="2">Cultural Events</option>
+              <option value="3">Sports Events</option>
+            </select>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary px-5">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- footer section-->
+    <div class="container-fluid bg-dark text-light m-0 p-0">
+      <footer class="py-5 mt-5 ">
+        <ul class="nav justify-content-center border-bottom py-3 mb-3">
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-light text-center">
+              Dantuluri Narayana Raju College (D.N.R) Autonomous, Bhimavaram, Andhra Pradesh.
+            </a>
+          </li>
+        </ul>
+        <p class="text-center text-light m-0 py-3">
+          Powered by WordPress | Theme | H&D by Srihari (MediaOne.in)
+        </p>
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>

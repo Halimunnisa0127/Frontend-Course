@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.restaurant-img {
+  border-radius: 100%;
+}
+
+.menu-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  margin-bottom: 30px;
+}
+
+.restaurant-item-image {
+  height: 270px;
+  padding: 10px 20px 0px 20px;
+}
+
+.menu-image {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-image:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-card img {
+  border-radius: 50px;
+}
+
+.menu-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+.menu-card:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.offer {
+  position: absolute;
+  top: 230px;
+  left: 30px;
+  background-color: red;
+  color: white;
+  text-align: center;
+  width: 110px;
+  padding: 2px 5px;
+  font-size: medium;
+}

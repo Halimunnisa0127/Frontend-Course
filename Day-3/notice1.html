@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .college-notices {
+            display: flex;
+            /* Or use gap below */
+            justify-content: center;
+        }
+
+        .notice {
+            margin: 10px 0;
+            /* Vertical spacing */
+            min-height: auto;
+            /* Remove fixed height */
+            padding: 20px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            border: 2px solid black;
+            box-sizing: border-box;
+        }
+
+        .header-section {
+            text-align: center;
+            font-size: small;
+            line-height: 10px;
+        }
+
+        .header-section p:first-child {
+            font-size: 10px;
+        }
+
+        .nav-section {
+            display: flex;
+            justify-content: center;
+            /* Center vertically */
+            gap: 40px;
+            font-size: small;
+        }
+
+        .logo {
+            display: flex;
+            width: 90px;
+            height: 90px;
+        }
+
+        .location-date {
+            padding-top: 20px;
+        }
+
+        .notice-data {
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        .notice-data p {
+            line-height: 2em;
+            margin: 0;
+            text-indent: 5.5em;
+        }
+
+        .principal-signature {
+            float: right;
+            margin-top: 60px;
+            font-size: small;
+        }
+
+        .signature-text {
+            font-family: 'Brush Script MT';
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="college-notices">
+        <div class="notice">
+            <header>
+                <div class="header-section">
+                    <p>Fax:08816-227318 off:08816-224072,224119,228342 Moblie:9491334119</p>
+                    <h3>DANTULURI NARAYANA RAJU COLLEGE(Autonomous)</h3>
+                    <p>(Accredited at 'B+')level by NAAC</p>
+                    <p>(Affiliated to Adikavi Nannaya University, Rajamahendravaram)</p>
+                </div>
+                <div class="nav-section">
+                    <div class="principal-details">
+                        <p>G. Moses</p>
+                        <p>M.se M.Ed</p>
+                        <p>PRINCIPAL(FAC)</p>
+                    </div>
+                    <img src="https://dnrcollege.org/en/wp-content/uploads/2019/02/about_DNR_Logo.jpg"
+                        alt="college logo" class="logo">
+                    <div class="location-date">
+                        <p>BHIMAVARAM </p>
+                        <p> Date:24-02-2025</p>
+                    </div>
+                </div>
+            </header>
+            <div class="notice-data">
+                <h4 style="text-align: center;"><u>NOTICE</u></h4>
+                <span>&emsp;&emsp;Students of 1 and 2nd year M.A.,M.COM., M.Sc.,
+                    M.C.A <br> and M.B.A the tuition fee (term fee) on
+                    or before 30-02-2025 without fine.</span>
+            </div>
+            <footer>
+                <div class="principal-signature">
+                    <p class="signature-text">G. Moses</p>
+                    <p>PRINCIPAL </p>
+                    <p>PRINCIPAL (F.A.C.)</p>
+                    <p>D.N.R. COLLEGE</p>
+                    <p>BHIMAVARAM.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.header-class {
+    display: flex;
+    align-items: center;
+    /* vertically center the content */
+    gap: 15px;
+    /* space between logo and text */
+    padding-left: 250px;
+    font-family: "Open Sans", sans-serif;
+    color: rgb(118, 18, 199);
+}
+
+.header-class img {
+    width: 100px;
+    height: 120px;
+}
+
+.college-info h3 {
+    margin: 0;
+    /* removes default margin for clean alignment */
+    display: inline-block;
+}
+
+@media screen and (max-width: 600px) {
+    .details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .info-labels,
+    .info-values {
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width:950px) {
+    .header-class {
+        font-size: 15px;
+        color: rgb(118, 18, 199);
+        padding-left: 170px;
+    }
+}
+
+@media screen and (max-width:850px) {
+    .header-class {
+        color: rgb(118, 18, 199);
+        font-size: 15px;
+        gap: 2px;
+        padding-left: 150px;
+    }
+}
+
+@media screen and (max-width:780px) {
+    .header-class {
+        position: relative;
+        font-size: 15px;
+        color: rgb(118, 18, 199);
+        gap: 4px;
+        padding-left: 100px;
+    }
+}
+
+@media screen and (max-width:730px) {
+    .header-class {
+        font-size: 13px;
+        color: rgb(118, 18, 199);
+        padding-left: 10px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .header-class {
+        font-size: 12px;
+        color: rgb(118, 18, 199);
+        padding-left: 10px;
+    }
+}
+
+.nav {
+    height: 60px;
+    color: rgb(118, 18, 199);
+    box-shadow: 10px 10px 40px rgba(128, 128, 128, 0.2);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #6012f1;
+}
+
+.items {
+    display: inline-block;
+    padding: 19px 15px;
+    color: #fcfdfc;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.items:hover {
+    background-color: red;
+    border: 4px solid red;
+    color: white;
+    border-radius: 5px;
+}
+
+.sidebar {
+    position: relative;
+    top: -50px;
+    left: 10px;
+}
+
+.sidenav {
+    height: 400px;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 195px;
+    left: 8px;
+    background-color: #170438;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 50px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #dab308;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.Department-images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.class-and-lab-img {
+    width: 650px;
+    height: 250;
+}
+
+@media screen and (max-width:1100px) {
+    .class-and-lab-img {
+        width: 500px;
+        height: 250px;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .class-and-lab-img {
+        width: 450px;
+        height: 250px;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .class-and-lab-img {
+        width: 400px;
+        height: 250px;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .class-and-lab-img {
+        width: 300px;
+        height: 250px;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .class-and-lab-img {
+        width: 230px;
+        height: 250px;
+        justify-content: space-between;
+    }
+}
+
+.faculty-card {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.Professor {
+    width: 400px;
+    height: 400px;
+    box-shadow: 20px 20px 40px rgba(128, 128, 128, 0.2);
+    border-radius: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.faculty-card img {
+    width: 400px;
+    height: 200px;
+    border-radius: 30px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+@media screen and (max-width:600px) {
+    .details {
+        padding-top: -5px;
+        display: flex;
+        flex-direction: row;
+        font-size: medium;
+        justify-content: space-around;
+    }
+}
+
+.footer {
+    display: block;
+    padding: 15px;
+    background-color: rgb(65, 63, 63);
+    overflow: hidden;
+    width:100vw;
+}
+
+.inner-footer {
+    height: auto;
+    font-size: 1.1rem;
+    text-align: center;
+    display: block;
+    color: white;
+}
