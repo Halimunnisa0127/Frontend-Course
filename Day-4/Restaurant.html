@@ -11,53 +11,54 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <!-- swiper link -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- icon link-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-  <Section>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top mb-5" aria-label="Offcanvas navbar large">
-      <div class="container-fluid">
-        <div class="text-center bg-dark text-info  fs-3 fw-bold">
-          <img src="https://img.freepik.com/premium-vector/grilled-chicken_78118-141.jpg" width="70" height="70"
-            class="restaurant-img" />
-          DELICIOUS FOOD
-        </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
-          aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
-          aria-labelledby="offcanvasNavbar2Label">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Offcanvas</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-              aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sign In</a>
-              </li>
-            </ul>
-            <form class="d-flex mt-3 mt-lg-0" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
+
+  <header class="container-fluid border-bottom Restaurant-nav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-2">
+      <!-- Brand Logo -->
+      <a class="navbar-brand  fs-3 fw-bold text-primary brand-title"  href="#">
+        <img src="https://img.freepik.com/premium-vector/grilled-chicken_78118-141.jpg" alt="restaurant-img" width="90"
+          height="90" class="rounded">
+        DELICIOUS FOOD
+      </a>
+
+      <!-- Toggle Button for Mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#headercontent"
+        aria-controls="headercontent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar Content -->
+      <div class="collapse navbar-collapse" id="headercontent">
+        <!-- Search Bar -->
+        <form class="d-flex mx-auto my-2 my-lg-0 position-relative w-75 w-lg-50" role="search">
+          <i class="fas fa-search position-absolute"
+            style="top: 50%; left: 10px; transform: translateY(-50%); color: rgb(121, 119, 119);"></i>
+          <input class="form-control ps-5" type="search" placeholder="Search for your favourite item..."
+            aria-label="Search">
+        </form>
+
+        <!-- Right Items -->
+        <ul class="navbar-nav ms-auto align-items-center">
+          <!-- Sign In Button -->
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a class="btn btn-danger text-white" href="#">Sign in</a>
+          </li>
+        </ul>
       </div>
     </nav>
-  </Section>
+  </header>
   <section>
-    <h3 class="menuCategorie text-danger fw-bold mb-3">Menu Categories</h3>
+    <h3 class="menuCategorie text-danger fw-bold mt-5 mb-3">Menu Categories</h3>
     <div class="swiper">
       <div class="swiper-wrapper">
         <!-- Slides -->
         <div class="swiper-slide ms-5"><img class="menu-image"
-            src="https://static.vecteezy.com/system/resources/previews/047/432/666/non_2x/fried-rice-with-vegetables-and-herbs-on-transparent-background-ai-generative-free-png.png"/>
+            src="https://static.vecteezy.com/system/resources/previews/047/432/666/non_2x/fried-rice-with-vegetables-and-herbs-on-transparent-background-ai-generative-free-png.png" />
         </div>
         <div class="swiper-slide"><img class="menu-image"
             src="https://i.pinimg.com/736x/67/e7/ff/67e7ff9859d6c9df0c30b897bf901e1d.jpg" /></div>
@@ -84,16 +85,16 @@
       <!-- Navigation & Pagination -->
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination "></div>
     </div>
   </section>
   <section>
     <h3 class="my-4 ps-5 text-danger fw-bold">Special Items</h3>
     <div class="container-fluid w-75 gx-2 mx-auto">
-      <div class="row Special-menu row-cols-1 row-cols-md-2 g-5 mb-5">
+      <div class="row Special-menu row-cols-1 row-cols-md-2 g-5 mb-5 \">
         <!-- 1st special item -->
         <div class="col">
-          <div class="card menu-card">
+          <div class="card menu-card border-0">
             <img src="https://t3.ftcdn.net/jpg/08/68/09/42/360_F_868094245_7nBKTvgSsqrpBumA7JtJDDwO5FzX2inD.jpg"
               class="card-img-top restaurant-item-image" alt="chicken biryani" />
             <div class="card-body">
@@ -113,7 +114,7 @@
         </div>
         <!-- 2nd special item -->
         <div class="col">
-          <div class="card menu-card">
+          <div class="card menu-card border-0">
             <img src="https://yummy-valley.com/wp-content/uploads/2024/01/millet-idli.webp"
               class="card-img-top restaurant-item-image" alt="Barnyard Millet Idli" />
             <div class="card-body">
@@ -132,7 +133,7 @@
         </div>
         <!-- 3rd special item -->
         <div class="col">
-          <div class="card menu-card">
+          <div class="card menu-card border-0">
             <img src="https://cdn.uengage.io/uploads/23764/image-4555-1701085766.jpg"
               class="card-img-top restaurant-item-image" alt="Paneer Biryani" />
             <div class="card-body">
@@ -152,7 +153,7 @@
         </div>
         <!-- 4th special item -->
         <div class="col">
-          <div class="card menu-card">
+          <div class="card menu-card border-0">
             <img src="https://b.zmtcdn.com/data/dish_photos/75a/40ccc8326b81ab23b050c8546568375a.jpg?output-format=webp"
               class="card-img-top restaurant-item-image" alt="Full meals" />
             <div class="card-body">
@@ -171,7 +172,7 @@
         </div>
         <!-- 5th special item -->
         <div class="col">
-          <div class="card menu-card">
+          <div class="card menu-card border-0">
             <img src="https://hot-thai-kitchen.com/wp-content/uploads/2021/11/chili-garlic-noodles-blog.jpg"
               class="card-img-top restaurant-item-image" alt="Chili garlic noodles" />
             <div class="card-body">
@@ -190,7 +191,7 @@
         </div>
         <!-- 6th special item -->
         <div class="col">
-          <div class="card menu-card">
+          <div class="card menu-card border-0">
             <img src="https://5.imimg.com/data5/LR/XD/DQ/ANDROID-96310153/images-jpeg-500x500.jpeg"
               class="card-img-top restaurant-item-image" alt="Mutton biryani" />
             <div class="card-body">
@@ -210,7 +211,7 @@
         </div>
         <!-- 7th special item -->
         <div class="col">
-          <div class="card menu-card">
+          <div class="card menu-card border-0">
             <img src="https://as2.ftcdn.net/v2/jpg/00/68/53/35/1000_F_68533591_guYFbtlPxbgfPJkYDGkI7NHGKFMovkvS.jpg"
               class="card-img-top restaurant-item-image" alt="veg fried rice" />
             <div class="card-body">
@@ -229,7 +230,7 @@
         </div>
         <!-- 8th special item -->
         <div class="col">
-          <div class="card menu-card">
+          <div class="card menu-card border-0">
             <img src="https://agrasweetsbanjara.com/cdn/shop/files/Ajmeri-Kalakand-edited_2.jpg?v=1731670923"
               class="card-img-top restaurant-item-image" alt="Echoing Ajmeri Kalakand" />
             <div class="card-body">
@@ -249,7 +250,7 @@
         </div>
         <!-- 9th special item -->
         <div class="col">
-          <div class="card menu-card">
+          <div class="card menu-card border-0">
             <img src="https://5.imimg.com/data5/PI/FT/MY-9134447/chocolate-ice-cream-1000x1000.jpg"
               class="card-img-top restaurant-item-image" alt="Chocolate ice cream" />
             <div class="card-body">
@@ -269,7 +270,7 @@
         </div>
         <!-- 10th special item -->
         <div class="col">
-          <div class="card menu-card">
+          <div class="card menu-card border-0">
             <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/pani_puri_90458_16x9.jpg"
               class="card-img-top restaurant-item-image" alt="Pani puri" />
             <div class="card-body">
@@ -333,7 +334,7 @@
       },
       pagination: {
         el: '.swiper-pagination',
-        
+
         clickable: true,
       },
       breakpoints: {
@@ -351,6 +352,8 @@
         }
       }
     });
+    
   </script>
 </body>
+
 </html>

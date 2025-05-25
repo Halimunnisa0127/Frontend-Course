@@ -10,13 +10,10 @@ body {
   flex-direction: column;
   overflow-x: hidden;
 }
-
-.restaurant-img {
-  border-radius: 100%;
-}
-
-.menuCategorie{
-  margin-top: 120px;
+.brand-title {
+  font-family: 'Georgia', serif; 
+  font-style: italic; 
+  letter-spacing: 1px; 
   
 }
 
