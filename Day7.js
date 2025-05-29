@@ -143,7 +143,6 @@ profile4.name = "Jane";    // only change profile4
 console.log(profile3, profile4);
 
 
-
 //Assignment 5: Variable Hoisting
 
 console.log(views);      // undefined
