@@ -137,8 +137,8 @@ console.log(profile3, profile4);
 
 // Try to changing values:
 Name = "jane_doe";     // Only userName changes
-profile3.name = "Hari";    // only change profile3
-profile4.name = "Jane";    // only change profile4
+profile3.name = "Hari";    // independent change profile3
+profile4.name = "Jane";    // independent change profile4
 
 console.log(profile3, profile4);
 
