@@ -167,9 +167,9 @@ x = 20;
 console.log(x, y);//only update x value
 
 let obj1 = { value: 10 };
-let obj2 = obj1;
+let obj2 = obj1; 
 
-console.log(obj1, obj2)  //store heap memory
+console.log(obj1, obj2)  //objs store heap memory
 
 obj1.value = 20;
 console.log(obj1, obj2)//Changes reflect in both — because both point to same reference.
