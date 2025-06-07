@@ -14,7 +14,7 @@ const movies = [
     {
         title: "Final Destination Bloodlines",
         time: "6PM",
-        seats: 40,
+        seats: 30,
         image: "https://assetscdn1.paytm.com/images/cinema/FD4-58568940-2f2f-11f0-bd90-d94369f6f4ca.jpg"
     },
         {
