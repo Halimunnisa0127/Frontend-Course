@@ -1,0 +1,31 @@
+.about-page h2 {
+  color: #d9534f;
+}
+
+.about-page p {
+  line-height: 1.7;
+}
+
+.about-page img {
+  max-height: 400px;
+  object-fit: cover;
+}
+.hero-section {
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1606788075761-8f5b98c4a3a3');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.overlay-text-box {
+  background: rgba(190, 4, 4, 0.61);
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  text-align: center;
+}
