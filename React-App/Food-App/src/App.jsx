@@ -39,7 +39,6 @@ function App() {
         <Route path="/restaurantdetails/:id" element={<RestaurantDetails />} />
         <Route path="/search" element={<SearchResults />} />
         <Route path="/checkout" element={<CheckOut />} />
-        \
         <Route path="*" element={<h1>404 Page Not Found</h1>} />
       </Routes>
       <Footer />
