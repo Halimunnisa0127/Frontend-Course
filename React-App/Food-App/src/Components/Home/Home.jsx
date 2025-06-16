@@ -7,6 +7,7 @@ import 'swiper/css/pagination';
 import { useNavigate } from 'react-router-dom';
 import MenuCard from '../MenuCard/MenuCard';
 import ItemCard from "../ItemCards/ItemCard";
+import './Home.css'
 
 
 function Home({ onAddToCart }) {

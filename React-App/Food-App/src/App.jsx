@@ -8,11 +8,17 @@ import RestaurantList from './Components/RestaurantList/RestaurantList';
 import RestaurantDetails from './Components/RestaurantDetails/RestaurantDetails';
 import Cart from './Components/Cart/Cart';
 import CheckOut from './Components/CheckOut/CheckOut';
-import SignIn from './Components/SignIn/SignIn';
+import Login from './Components/Login/Login';
 import SearchResults from './Components/SearchResult/SearchResults';
 import Footer from './Components/Footer/Footer';
+
+
 function App() {
-   const [cartItems, setCartItems] = useState([]);
+
+  <div className="App">
+    <Login />
+  </div>
+  const [cartItems, setCartItems] = useState([]);
 
   const handleAddToCart = (item) => {
     setCartItems((prev) => [...prev, item]);
@@ -25,17 +31,18 @@ function App() {
     <BrowserRouter>
       <Header cartCount={cartItems.length} />
       <Routes>
-         <Route path="/" element={<Home onAddToCart={handleAddToCart} />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home onAddToCart={handleAddToCart} />} />
         <Route path="/about" element={<About />} />
-          <Route path="/restaurantlist/:category" element={<RestaurantList onAddToCart={handleAddToCart} />} />
-            <Route path="/cart" element={<Cart cartItems={cartItems} onRemoveFromCart={handleRemoveFromCart} />} />
+        <Route path="/restaurantlist/:category" element={<RestaurantList onAddToCart={handleAddToCart} />} />
+        <Route path="/cart" element={<Cart cartItems={cartItems} onRemoveFromCart={handleRemoveFromCart} />} />
         <Route path="/restaurantdetails/:id" element={<RestaurantDetails />} />
         <Route path="/search" element={<SearchResults />} />
         <Route path="/checkout" element={<CheckOut />} />
-        <Route path="/signin" element={<SignIn />} />
+        \
         <Route path="*" element={<h1>404 Page Not Found</h1>} />
       </Routes>
-      <Footer/>
+      <Footer />
     </BrowserRouter>
   );
 }

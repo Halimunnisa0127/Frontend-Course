@@ -34,7 +34,7 @@ function CheckOut() {
 
       {orderPlaced ? (
         <div className="alert alert-success mt-4">
-          🎉 Your order has been placed successfully!
+           Your order has been placed successfully!
         </div>
       ) : (
         <>

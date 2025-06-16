@@ -42,11 +42,9 @@ function Header() {
           >
             DELICIOUS FOOD
           </Link>
-
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
             <span className="navbar-toggler-icon"></span>
           </button>
-
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <form className="d-flex search-bar mx-auto" role="search" onSubmit={handleSearch}>
               <BsSearch size={18} className="icon" />
@@ -59,13 +57,12 @@ function Header() {
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
             </form>
-
             <ul className="navbar-nav ms-auto">
               <li className="nav-item pe-5">
-                <Link to="/" className="nav-link fs-5">Home</Link>
+                <Link to="/home" className="nav-link fs-5 text-dark">Home</Link>
               </li>
               <li className="nav-item pe-5">
-                <Link to="/about" className="nav-link fs-5">About</Link>
+                <Link to="/about" className="nav-link fs-5 text-dark">About</Link>
               </li>
               <li className="nav-item pe-5">
                 <Link to="/cart" className="nav-link fs-5 text-dark">
@@ -73,7 +70,7 @@ function Header() {
                 </Link>
               </li>
               <li className="nav-item pe-5">
-                <Link to="/signIn" className="nav-link fs-5 text-dark">Sign In</Link>
+                <Link to="/" className="nav-link fs-5 text-dark"></Link>
               </li>
             </ul>
           </div>

@@ -4,10 +4,10 @@ import { useNavigate } from "react-router-dom";
 function Cart({ cartItems, onRemoveFromCart }) {
   const navigate = useNavigate();
 
-  // ✅ Calculate total amount
+  // Calculate total amount
   const totalAmount = cartItems.reduce((sum, item) => sum + item.price, 0);
 
-  // ✅ Handle checkout navigation
+  //  Handle checkout navigation
   const handleCheckout = () => {
     navigate("/checkout", {
       state: {
@@ -44,7 +44,6 @@ function Cart({ cartItems, onRemoveFromCart }) {
               </button>
             </div>
           ))}
-
           <div className="text-end mt-4">
             <h4>Total: ₹{totalAmount}</h4>
             <button className="btn btn-success mt-2" onClick={handleCheckout}>

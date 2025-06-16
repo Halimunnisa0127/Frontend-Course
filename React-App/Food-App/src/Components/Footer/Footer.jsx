@@ -8,14 +8,14 @@ function Footer() {
       <footer className="py-5">
         <div className="row">
           {/* Logo Section */}
-          <div className="col-12 col-md-3 mb-3 ps-4">
+          <div className="col-12 col-md-3 mb-3 ps-4 ">
             <img
               src="https://img.freepik.com/premium-vector/grilled-chicken_78118-141.jpg"
               alt="Logo"
               width="200"
               height="150"
-              className="text-white"
-              border-radius="100%"
+              className="text-white restaurant-logo"
+             
             />
             <p className="mt-3">Enjoy delicious food</p>
           </div>
