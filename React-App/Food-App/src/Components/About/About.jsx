@@ -47,7 +47,7 @@ function About() {
             <li><FaHeadset className="text-danger me-2" /> 24/7 Friendly Support</li>
           </ul>
           <p className="mt-3">
-            We bring joy to your table with every bite. Whether it's a spicy Indian biryani or a cheesy Italian pizza, your cravings are just a click away.
+            We bring joy to your table with every bite.Whether it's a spicy Indian biryani or a cheesy Italian pizza, your cravings are just a click away.
           </p>
         </div>
       </motion.div>
