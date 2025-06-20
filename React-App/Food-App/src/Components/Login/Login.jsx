@@ -16,7 +16,7 @@ function Login() {
     }
     function getsubmit() {
         console.log(UserName, password)
-        if (UserName === "rajesh" && password ==="1234") {
+        if (UserName === "sk Halimunnisa" && password ==="1234") {
             alert("Login successs")
             navigate('/Home')
         }
