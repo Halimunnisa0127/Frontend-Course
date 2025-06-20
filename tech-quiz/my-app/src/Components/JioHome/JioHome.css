@@ -1,0 +1,76 @@
+.techquize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.quation,
+.answer {
+  border: 3px solid rgb(55, 107, 6);
+  width: 400px;
+  height: 300px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  background-color: #1a4e0f;
+  color: white;
+}
+
+.quizetechquation {
+  background-color:rgb(255, 10, 92);
+  border: #09be21;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 8px 0;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+
+}
+
+.quizetechquation:hover {
+background-color: #e7d90c;
+  transform: scale(1.02);
+}
+
+.answer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.answer li {
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 4px;
+   background-color: hsl(253, 77%, 45%);
+ 
+  transition: background-color 0.3s;
+}
+
+/* Hover effect only if not answered */
+.answer li:hover {
+  background-color: #e7d90c;
+  transform: scale(1.02);
+}
+
+
+li.correct {
+  background-color: #28a745 !important;
+  color: rgb(245, 244, 244);
+
+}
+
+li.wrong {
+  background-color: #dc3545 !important;
+  color: white;
+}
