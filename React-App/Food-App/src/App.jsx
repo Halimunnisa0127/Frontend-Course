@@ -14,10 +14,6 @@ import Footer from './Components/Footer/Footer';
 
 
 function App() {
-
-  <div className="App">
-    <Login />
-  </div>
   const [cartItems, setCartItems] = useState([]);
 
   const handleAddToCart = (item) => {

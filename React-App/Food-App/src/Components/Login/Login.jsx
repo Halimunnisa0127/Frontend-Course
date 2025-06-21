@@ -17,7 +17,6 @@ function Login() {
     function getsubmit() {
         console.log(UserName, password)
         if (UserName === "sk Halimunnisa" && password ==="1234") {
-            alert("Login successs")
             navigate('/Home')
         }
         else {
