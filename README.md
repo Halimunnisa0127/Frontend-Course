@@ -28,8 +28,9 @@ This repository contains all the assignments and mini-projects I completed as pa
 | Day-7 | JavaScript examples on variable types, scope, hoisting, memory | JavaScript |
 | Day-8 | Created movie booking web application | HTML5, CSS3, JavaScript |
 | Day-9 | Simple login page using React | React.js |
-| Day-10 | Movie cards app with seat booking & like buttons | React.js |
+| Day-10 | Movie cards app with seat booking & like buttons | React.js+vite |
 | Tech-quiz | A simple tech quiz built with React | React.js |
+| React-app | A food delivery application built with React.js | React.js+vite |
 
 ---
 
