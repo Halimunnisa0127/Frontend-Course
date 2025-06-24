@@ -1,0 +1,21 @@
+#root {
+  margin: 0 auto;
+}
+.movie-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.click-element:active {
+  color: red;
+  fill: red;
+}
+
+.moviecards {
+  font-size: small;
+  line-height: 0.7;
+
+}
+
+
