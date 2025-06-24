@@ -30,7 +30,7 @@ This repository contains all the assignments and mini-projects I completed as pa
 | Day-9 | Simple login page using React | React.js |
 | Day-10 | Movie cards app with seat booking & like buttons | React.js+vite |
 | Tech-quiz | A simple tech quiz built with React | React.js |
-| React-app | A food delivery application built with React.js | React.js+vite |
+| React-app | A food delivery application built with React | React.js+vite |
 
 ---
 
