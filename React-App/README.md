@@ -96,7 +96,8 @@ http://localhost:5173
 ## 📸 Screenshots
 
 ### 🏠 Home Page
-![Home Page](food-app/images/home.png)
+![Home Page](![Home Page](https://raw.githubusercontent.com/Halimunnisa0127/Frontend-Course/main/food-app/images/home.png)
+)
 
 ### 🛒 About Page
 ![ About Page](food-app/images/about.png)
