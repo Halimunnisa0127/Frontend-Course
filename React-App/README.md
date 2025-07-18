@@ -95,18 +95,18 @@ http://localhost:5173
 
 ## 📸 Screenshots
 
-### 🏠 Home Page
-![Home Page](![Home Page](https://raw.githubusercontent.com/Halimunnisa0127/Frontend-Course/main/food-app/images/home.png)
-)
+### 🏠 Home Page  
+![Home Page](../Food-App/images/home.png)
 
-### 🛒 About Page
-![ About Page](food-app/images/about.png)
+### 🛒 About Page  
+![About Page](../Food-App/images/about.png)
 
-### 🛒 Cart Page
-![Cart Page](food-app/images/cart.png)
+### 🛒 Cart Page  
+![Cart Page](../Food-App/images/cart.png)
 
-### ✅ Checkout Page
-![Checkout Page](food-app/images/checkout.png)
+### ✅ Checkout Page  
+![Checkout Page](../Food-App/images/checkout.png)
+
 
 
 ## **👩‍💻 Author**
