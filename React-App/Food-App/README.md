@@ -1,12 +1,115 @@
-# React + Vite
+# 🍽️ React Food Delivery App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a responsive and interactive Food Delivery Web Application built using **React** and **Vite**. It includes features like user login, restaurant listing, food item details, shopping cart, and checkout.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
 
-## Expanding the ESLint configuration
+- [React](https://reactjs.org/) (JSX)
+- [Vite](https://vitejs.dev/)
+- [React Router DOM](https://reactrouter.com/)
+- [Bootstrap](https://getbootstrap.com/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+
+- 🔐 **Login Page**
+- 🏠 **Home Page** with food categories
+- 📃 **Restaurant List** by category
+- 📄 **Restaurant Details** view
+- 🛒 **Shopping Cart** with add/remove functionality
+- ✅ **Checkout page**
+- 🔍 **Search functionality**
+- 🧾 **404 Page** for undefined routes
+- 🧩 **React Router** based navigation
+- 🎨 **Bootstrap styling**
+
+---
+
+
+
+
+## 📁 Folder Structure
+
+src/
+├── Components/
+
+│ ├── About/
+
+│ ├── Cart/
+
+│ ├── CheckOut/
+
+│ ├── Footer/
+
+│ ├── Header/
+
+│ ├── Home/
+
+│ ├── Login/
+│ ├── RestaurantDetails/
+
+│ ├── RestaurantList/
+
+│ └── SearchResult/
+
+├── App.css
+
+├── App.jsx
+
+├── index.css
+
+└── main.jsx
+
+
+---
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/Halimunnisa0127/Frontend-Course.git
+
+
+---
+
+## 📦 How to Run the Project
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/Halimunnisa0127/Frontend-Course.git
+
+
+
+    cd Frontend-Course
+
+    cd food-app  # if food-app is a subfolder
+
+    npm install
+
+    npm run dev
+
+http://localhost:5173
+
+## 📸 Screenshots
+
+### 🏠 Home Page  
+![Home Page](../Food-App/images/home.png)
+
+### 🛒 About Page  
+![About Page](../Food-App/images/about.png)
+
+### 🛒 Cart Page  
+![Cart Page](../Food-App/images/cart.png)
+
+### ✅ Checkout Page  
+![Checkout Page](../Food-App/images/checkout.png)
+
+
+
+## **👩‍💻 Author**
+
+
+# **Halimunnisa Shaik**
