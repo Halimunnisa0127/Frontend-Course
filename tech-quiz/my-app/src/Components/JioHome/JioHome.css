@@ -1,3 +1,9 @@
+body {
+  background: url("bgimage.jpg") no-repeat center center/cover;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
 .techquize {
   display: flex;
   justify-content: center;
@@ -14,33 +20,37 @@
 
 .quation,
 .answer {
-  border: 3px solid rgb(55, 107, 6);
   width: 400px;
   height: 300px;
-  border-radius: 5px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding: 20px;
-  background-color: #1a4e0f;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   color: white;
 }
 
 .quizetechquation {
-  background-color:rgb(255, 10, 92);
-  border: #09be21;
+border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 10px;
   border-radius: 5px;
   margin: 8px 0;
-  border-radius: 4px;
   transition: background-color 0.3s;
-
+  color: white;
+  font-weight: bold;
 }
 
 .quizetechquation:hover {
-background-color: #e7d90c;
+  background-color: #e7d90c;
   transform: scale(1.02);
+  color: black;
 }
 
 .answer ul {
@@ -51,26 +61,39 @@ background-color: #e7d90c;
 .answer li {
   margin: 8px 0;
   padding: 10px;
-  border-radius: 4px;
-   background-color: hsl(253, 77%, 45%);
- 
-  transition: background-color 0.3s;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  backdrop-filter: blur(5px);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+    font-weight: bold;
 }
 
-/* Hover effect only if not answered */
+/* Hover effect if not answered */
 .answer li:hover {
-  background-color: #e7d90c;
   transform: scale(1.02);
+  background-color: #e7d90c;
+  color: black;
 }
-
 
 li.correct {
-  background-color: #28a745 !important;
-  color: rgb(245, 244, 244);
-
+  background: rgba(40, 167, 69, 0.7) !important;
+  ;
+  /* green glass */
+  border: 1px solid #28a745;
+  color: white;
+  font-weight: bold;
+  backdrop-filter: blur(6px);
 }
 
 li.wrong {
-  background-color: #dc3545 !important;
+  background: rgba(220, 53, 69, 0.7);
+  /* red glassy */
+  border: 1px solid #dc3545;
   color: white;
+  font-weight: bold;
+  backdrop-filter: blur(6px);
+  background-color: #dc3545 ! important;
 }

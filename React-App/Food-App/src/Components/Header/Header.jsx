@@ -1,82 +1,74 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import './Header.css';
-import { BsCart4, BsSearch } from "react-icons/bs";
+
+import React, { useState } from "react";
+import { Link } from "react-scroll"; // For smooth scrolling
+import { Menu, X } from "lucide-react"; // Mobile menu icons
 
 function Header() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    const category = searchTerm.trim().toLowerCase();
+  const toggleMenu = () => setIsOpen(!isOpen);
 
-    if (category) {
-      navigate(`/restaurantlist/${category}`);
-      setSearchTerm('');
-    }
-  };
+  const navItems = [
+    { name: "Home", to: "home" },
+    { name: "About", to: "about" },
+    { name: "Skills", to: "skills" },
+    { name: "Projects", to: "projects" },
+    { name: "Contact", to: "contact" },
+  ];
 
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary nav">
-        <div className="container-fluid header py-2">
-          <img
-            src="https://img.freepik.com/premium-vector/grilled-chicken_78118-141.jpg"
-            alt="Restaurant Logo"
-            width="90"
-            height="90"
-            className="rounded-circle"
-          />
-          <Link
-            className="navbar-brand"
-            to="/"
-            style={{
-              fontWeight: "bold",
-              fontSize: "28px",
-              color: "#ff4500",
-              letterSpacing: "2px",
-              fontFamily: "cursive",
-              textShadow: "2px 2px 4px rgba(0,0,0,0.2)"
-            }}
-          >
-            DELICIOUS FOOD
-          </Link>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
-            <span className="navbar-toggler-icon"></span>
+    <header className="bg-white shadow-md fixed w-full top-0 left-0 z-50">
+      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+        {/* Logo */}
+        <h1 className="text-xl font-bold text-indigo-600">
+          Halimunnisa / Frontend Developer
+        </h1>
+
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex space-x-6">
+          {navItems.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              smooth={true}
+              duration={500}
+              offset={-70}
+              spy={true}
+              activeClass="text-indigo-600 font-semibold"
+              className="cursor-pointer text-gray-700 hover:text-indigo-600"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </nav>
+
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <button onClick={toggleMenu}>
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
-          <div className="collapse navbar-collapse" id="navbarNavDropdown">
-            <form className="d-flex search-bar mx-auto" role="search" onSubmit={handleSearch}>
-              <BsSearch size={18} className="icon" />
-              <input
-                className="form-control ps-5"
-                type="search"
-                placeholder="Search for your favourite item..."
-                aria-label="Search"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-            </form>
-            <ul className="navbar-nav ms-auto">
-              <li className="nav-item pe-5">
-                <Link to="/home" className="nav-link fs-5 text-dark">Home</Link>
-              </li>
-              <li className="nav-item pe-5">
-                <Link to="/about" className="nav-link fs-5 text-dark">About</Link>
-              </li>
-              <li className="nav-item pe-5">
-                <Link to="/cart" className="nav-link fs-5 text-dark">
-                  <BsCart4 size={28} className="pe-1" /> Cart
-                </Link>
-              </li>
-              <li className="nav-item pe-5">
-                <Link to="/" className="nav-link fs-5 text-dark"></Link>
-              </li>
-            </ul>
-          </div>
         </div>
-      </nav>
-    </div>
+      </div>
+
+      {/* Mobile Nav Items */}
+      {isOpen && (
+        <div className="md:hidden backdrop-blur-md bg-white/90 px-4 py-4 space-y-3 shadow-md">
+          {navItems.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              smooth={true}
+              duration={500}
+              offset={-70}
+              onClick={() => setIsOpen(false)}
+              className="block text-gray-700 hover:text-indigo-600"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </div>
+      )}
+    </header>
   );
 }
 

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import './JioHome.css';
 
+
+
 function JioHome() {
   const Quations = [
     {
@@ -89,7 +91,7 @@ function JioHome() {
         setSelectedOption(null);
         setAnswered(false);
       }
-       else {
+      else {
         setIsCompleted(true);
 
       }
@@ -98,7 +100,8 @@ function JioHome() {
 
   return (
     <>
-      <h1 className="mt-5 text-center text-danger bg-info">Welcome To Tech Quiz</h1>
+    
+      <h1 className="mt-5 text-center text-light bg-transparent">Welcome To Tech Quiz</h1>
       {isCompleted ? (
         <div className="text-center mt-5">
           <h2>  <span>{"\uD83C\uDF89"}</span>Quiz Completed! <span>{"\uD83C\uDF8A"}</span> </h2>

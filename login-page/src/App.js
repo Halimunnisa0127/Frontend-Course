@@ -11,10 +11,12 @@ function App() {
     updatedUserName(event.target.value)
 
   }
+
   function getpassword(event) {
      console.log("password:",event.target.value)
     updatedpassword(event.target.value)
   }
+  
   function getsubmit() {
     console.log(UserName, password)
     if (UserName === "shaik Halimunnisa" && password === "1234") {
@@ -24,6 +26,7 @@ function App() {
       alert(" In valid userName")
     }
   }
+
   return (
     <>
       <div className="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5"
@@ -54,7 +57,8 @@ function App() {
       </div>
     </>
   )
-}
+};
+
 
 export default App;
 

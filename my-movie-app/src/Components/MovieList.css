@@ -1,0 +1,17 @@
+.rating {
+  position: relative;
+  top: -10px;
+  border-radius: 2px;
+  max-width: 387px;
+  text-align: center;
+  background-color: black;
+  color: white;
+
+}
+
+.moviecard:hover {
+    opacity: 0.9;
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+
+}
