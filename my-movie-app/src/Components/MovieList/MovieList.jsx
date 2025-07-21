@@ -160,12 +160,12 @@ function MovieList() {
     useEffect(() => {
         const savedMovies = JSON.parse(localStorage.getItem("movies"));
         const savedShowtimes = JSON.parse(localStorage.getItem("showtimes"));
-        const savedOpenShowtimes = JSON.parse(localStorage.getItem("openShowtimes"));
+
 
         if (Array.isArray(savedMovies) && savedMovies.length > 0) {
             setMovies(savedMovies);
             setShowtimes(savedShowtimes || {});
-            setOpenShowtimes(savedOpenShowtimes || {});
+
         } else {
             loadMovies();
         }
@@ -179,9 +179,7 @@ function MovieList() {
         localStorage.setItem("showtimes", JSON.stringify(showtimes));
     }, [showtimes]);
 
-    useEffect(() => {
-        localStorage.setItem("openShowtimes", JSON.stringify(openShowtimes));
-    }, [openShowtimes]);
+
 
     return (
         <div className='container mt-4'>

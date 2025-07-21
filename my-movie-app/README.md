@@ -1,12 +1,88 @@
-# React + Vite
+# 🎬 MovieList React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive Movie List app built with React that allows users to add, like, view showtimes, and delete movies. It uses `localStorage` for data persistence and supports dynamic user interaction with a responsive design.
 
-Currently, two official plugins are available:
+## 📌 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✅ Add movies with title, image, rating, and duration.
+- 👍 Like/unlike movies with a dynamic like counter.
+- ⏰ View random showtimes for each movie.
+- 🗑️ Delete movies from the list.
+- 💾 Local storage support to persist movie data.
+- 🔁 Load predefined sample movies.
+- 🧹 Clear the full list with one click.
+- 🎨 Responsive card layout using Bootstrap.
+- ⭐ Format large like numbers in K and L notation.
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- JavaScript (ES6+)
+- Bootstrap 5
+- React Icons
+- LocalStorage API
+
+## 📦 Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/your-username/movie-list-app.git
+   cd movie-list-app
+   ```
+
+📁 File Structure
+
+movie-list-app/
+├── public/
+
+├── src/
+
+│   ├── components/
+
+│   │   └── MovieList.jsx
+
+│   ├── MovieList.css
+
+│   ├── App.jsx
+
+│   └── index.js
+
+├── package.json
+
+└── README.md
+
+    Install dependencies
+
+bash
+Copy
+Edit
+npm install
+Start the app
+
+bash
+Copy
+Edit
+npm start
+The app will run at http://localhost:3000
+
+📸 Screenshots
+### 🏠Home Page  
+![Home Page](../my-movie-app/src/Images/My-Movie-List.png)
+
+### Adding Movie 
+![Adding Movie ](../my-movie-app/src/Images/Adding-And-Deleting-Movies.png)
+
+### Clear Page
+![Clear Page](../my-movie-app/src/Images/Clear-Movies.png)
+
+
+
+# Author
+
+## Halimunnisa Shaik
+
+GitHub: https://github.com/Halimunnisa0127
+
+LinkedIn: https://www.linkedin.com/in/halimunnisa-shaik---
+
