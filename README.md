@@ -17,20 +17,24 @@ This repository contains all the assignments and mini-projects I completed as pa
 
 ## 📁 Assignments Summary
 
-| Day | Project Description | Technologies |
-|-----|---------------------|--------------|
-| Day-1 | Created cat breeds page and their details | HTML5, CSS3 |
-| Day-2 | Developed profile card and class timetable | HTML5, CSS3 |
-| Day-3 | MCA Department website with notices and events | HTML5, CSS3 |
-| Day-4 | College department & restaurant website | HTML5, CSS3 |
-| Day-5 | Practiced JavaScript variables and scopes | JavaScript |
-| Day-6 | Practiced JavaScript primitives and non-primitives | JavaScript |
-| Day-7 | JavaScript examples on variable types, scope, hoisting, memory | JavaScript |
-| Day-8 | Created movie booking web application | HTML5, CSS3, JavaScript |
-| Day-9 | Simple login page using React | React.js |
-| Day-10 | Movie cards app with seat booking & like buttons | React.js+vite |
-| Tech-quiz | A simple tech quiz built with React | React.js |
-| React-app | A food delivery application built with React | React.js+vite |
+| Day         | Project Description                                                       | Technologies Used               |
+|-------------|----------------------------------------------------------------------------|----------------------------------|
+| Day-1       | Created cat breeds page with their details                                | HTML5, CSS3                      |
+| Day-2       | Developed profile card and class timetable                                | HTML5, CSS3                      |
+| Day-3       | Built MCA Department website with notices and events                      | HTML5, CSS3                      |
+| Day-4       | Designed college department and restaurant websites                       | HTML5, CSS3                      |
+| Day-5       | Practiced JavaScript variables and scopes                                 | JavaScript                       |
+| Day-6       | Practiced JavaScript primitives and non-primitives                        | JavaScript                       |
+| Day-7       | JavaScript examples on variable types, scope, hoisting, and memory        | JavaScript                       |
+| Day-8       | Created a movie booking web application                                   | HTML5, CSS3, JavaScript          |
+| Day-9       | Developed a simple login page using React                                 | React.js                         |
+| Day-10      | Movie cards app with seat booking and like buttons                        | React.js, Vite                   |
+| Tech-Quiz   | Developed a simple tech quiz application                                   | React.js                         |
+| Login-Page  | Login form with username and password validation using React and Bootstrap| React.js, Vite, Bootstrap        |
+| Fake-API    | Added login and product listing components with API integration           | React.js, Vite, API              |
+| Movie-App   | MovieList component with Promise and Axios for data fetching              | React.js, Vite, JavaScript, Axios|
+| My-Movie-App| MovieList component with add, like, showtimes, and delete features        | React.js, Vite, JavaScript       |
+
 
 ---
 
