@@ -1,12 +1,65 @@
-# React + Vite
+# 🛍️ Product Filter App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React application that fetches products from the [Fake Store API](https://fakestoreapi.com/) and allows users to filter them by category.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Fetches product data using **Axios**
+- Filters products based on selected category
+- Displays product **image, title, price, and rating**
+- Responsive layout using **Bootstrap**
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React.js
+- Axios
+- Bootstrap 5
+- JavaScript (ES6)
+
+## 📸 Preview
+
+
+Home.jsx ![alt text](Images/allProducts.png)
+(![alt text](Images/FilterProducts.png))
+
+## 🧾 How to Run
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/product-filter-app.git
+```
+
+### Install dependencies:
+npm install
+
+Start the development server:
+
+npm start
+Open your browser and go to http://localhost:3000
+
+📂 File Structure
+
+src/
+
+
+├── Home.jsx         # Main component with product
+
+logic
+
+├── App.js           # Root component
+
+├── index.js         # Entry point
+
+└── ...
+
+
+📦 API Source
+
+https://fakestoreapi.com/products
+
+
+## **👩‍💻 Author**
+
+
+# **Halimunnisa Shaik**
