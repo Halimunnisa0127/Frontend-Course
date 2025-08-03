@@ -64,7 +64,3 @@ The app will run on http://localhost:3000
 ![Quiz Score ](./src/Images\Score.png)
 
 
-## **👩‍💻 Author**
-
-
-# **Halimunnisa Shaik**
