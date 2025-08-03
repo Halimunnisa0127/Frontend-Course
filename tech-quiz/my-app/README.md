@@ -58,10 +58,10 @@ The app will run on http://localhost:3000
 
 📸 Screenshots
 ### 🏠Home Page  
-![Home Page](./src/Images\Home.png)
+![Home Page](./src/Images/Home.png)
 
 ### Complete Quiz
-![Quiz Score ](./src/Images\Score.png)
+![Quiz Score ](./src/Images/Score.png)
 
 
 ## **👩‍💻 Author**
