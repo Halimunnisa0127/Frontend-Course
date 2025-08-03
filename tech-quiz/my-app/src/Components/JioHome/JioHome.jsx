@@ -103,9 +103,9 @@ function JioHome() {
     
       <h1 className="mt-5 text-center text-light bg-transparent">Welcome To Tech Quiz</h1>
       {isCompleted ? (
-        <div className="text-center mt-5">
+        <div className="text-center mt-5 text-light">
           <h2>  <span>{"\uD83C\uDF89"}</span>Quiz Completed! <span>{"\uD83C\uDF8A"}</span> </h2>
-          <h3>Your Score: {score} / {Quations.length}</h3>
+          <h2>Your Score: {score} / {Quations.length}</h2>
         </div>
       ) : (
         <>
@@ -121,9 +121,9 @@ function JioHome() {
       <div className="techquize">
         <div className="container d-flex">
           <div className="quation">
-            <p className="quizetechquation"><strong>Q{currentIndex + 1}:</strong> {currentQuestion.Quation}</p>
+            <p className="quizetechquation fs-4"><strong>Q{currentIndex + 1}:</strong> {currentQuestion.Quation}</p>
           </div>
-          <div className="answer">
+          <div className="answer fs-5 ">
             <ul>
               {currentQuestion.options.map((opt, i) => {
                 let className = "";
