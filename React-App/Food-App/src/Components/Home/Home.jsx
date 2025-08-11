@@ -9,16 +9,14 @@ import MenuCard from '../MenuCard/MenuCard';
 import ItemCard from "../ItemCards/ItemCard";
 import './Home.css'
 
-
 function Home({ onAddToCart }) {
   const navigate = useNavigate();
+
   const categories = [
     {
-
       name: "biryani",
       image: "https://i.pinimg.com/736x/67/e7/ff/67e7ff9859d6c9df0c30b897bf901e1d.jpg"
     },
-
     {
       name: "veg food",
       image: "https://static.vecteezy.com/system/resources/previews/037/920/252/non_2x/ai-generated-an-indian-masala-thali-gudi-padwa-sweets-and-cuisine-concept-photo.jpeg"
@@ -34,57 +32,48 @@ function Home({ onAddToCart }) {
     {
       name: "sweets",
       image: "https://img.freepik.com/premium-photo/brazil-s-famous-chocolate-truffles-brigadeiros_679964-4174.jpg"
-    },
-
-
+    }
   ];
+
   const itemcard = [
     {
-      name: "Hyderabadi Biryani", price:150, cuisine: "Indian", rating: 4.1,
+      name: "Hyderabadi Biryani", price: 150, cuisine: "Indian", rating: 4.1,
       image: "https://t3.ftcdn.net/jpg/08/68/09/42/360_F_868094245_7nBKTvgSsqrpBumA7JtJDDwO5FzX2inD.jpg",
-
     },
     {
-      name: "Veg Fried Rice", price: 100, cuisine: "Chinese", rating:3.9,
+      name: "Veg Fried Rice", price: 100, cuisine: "Chinese", rating: 3.9,
       image: "https://as2.ftcdn.net/v2/jpg/06/09/35/79/1000_F_609357995_9f5MTF73kiu6UYAtpJZRT9BFWet4l3fX.jpg",
-
     },
     {
-      name: "Paneer Biryani", price:150, cuisine: "Indian", rating: 4.0,
+      name: "Paneer Biryani", price: 150, cuisine: "Indian", rating: 4.0,
       image: "https://cdn.uengage.io/uploads/23764/image-4555-1701085766.jpg",
-
     },
     {
       name: "Traditional Thali", price: 100, cuisine: "Indian", rating: 4.1,
       image: "https://t3.ftcdn.net/jpg/07/46/18/34/240_F_746183403_f9XB8NMef8so3DQwjEVifeuBTUNPq2vZ.jpg",
-
     },
     {
-      name: "Chili garlic noodles", price:100, cuisine: "Indian", rating: 3.9,
+      name: "Chili garlic noodles", price: 100, cuisine: "Indian", rating: 3.9,
       image: "https://hot-thai-kitchen.com/wp-content/uploads/2021/11/chili-garlic-noodles-blog.jpg",
-
     },
     {
-      name: "Chocolate ice cream", price:150, cuisine: "Indian", rating: 4.0,
+      name: "Chocolate ice cream", price: 150, cuisine: "Indian", rating: 4.0,
       image: "https://5.imimg.com/data5/PI/FT/MY-9134447/chocolate-ice-cream-1000x1000.jpg",
-
     },
     {
-      name: "Mutton Biryani", price:250, cuisine: "Indian", rating: 4.3,
+      name: "Mutton Biryani", price: 250, cuisine: "Indian", rating: 4.3,
       image: "https://5.imimg.com/data5/LR/XD/DQ/ANDROID-96310153/images-jpeg-500x500.jpeg",
-
     },
     {
-      name: "Pudina Panipuri", price:100, cuisine: "Indian", rating: 3.9,
+      name: "Pudina Panipuri", price: 100, cuisine: "Indian", rating: 3.9,
       image: "https://thumbs.dreamstime.com/b/pani-puri-isolated-white-background-pani-puri-isolated-white-background-361598748.jpg?w=768",
-
     },
-      {
+    {
       name: "Echoing Ajmeri Kalakand", price: 300, cuisine: "Indian", rating: 4.3,
       image: "https://agrasweetsbanjara.com/cdn/shop/files/Ajmeri-Kalakand-edited_2.jpg?v=1731670923",
-
     }
   ];
+
   const handleImageClick = (category) => {
     navigate(`/restaurantlist/${category}`);
   };
@@ -131,26 +120,25 @@ function Home({ onAddToCart }) {
           </SwiperSlide>
         ))}
       </Swiper>
-      <h3 className="text-danger ms-5 fw-bold mt-5 mb-3">Popular items</h3>
+
+      {/* Popular Items */}
+      <h3 className="text-danger ms-5 fw-bold mt-5 mb-3">Popular Items</h3>
       <div className="container mt-5">
         <div className="row">
           {itemcard.map((item, index) => (
-            <div className="col-6 col-lg-3 mb-4 " key={index}>
+            <div className="col-6 col-lg-4 mb-4" key={index}>
               <ItemCard
                 name={item.name}
                 price={item.price}
                 image={item.image}
                 cuisine={item.cuisine}
                 rating={item.rating}
-                onAddToCart={() => onAddToCart(item)}
+                onAddToCart={onAddToCart} // ✅ Final fix here
               />
-              
             </div>
           ))}
-
         </div>
       </div>
-
     </div>
   );
 }

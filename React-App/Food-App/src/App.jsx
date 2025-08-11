@@ -1,6 +1,6 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-import { useState } from 'react';
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import About from './Components/About/About';
@@ -9,35 +9,118 @@ import RestaurantDetails from './Components/RestaurantDetails/RestaurantDetails'
 import Cart from './Components/Cart/Cart';
 import CheckOut from './Components/CheckOut/CheckOut';
 import Login from './Components/Login/Login';
-import SearchResults from './Components/SearchResult/SearchResults';
 import Footer from './Components/Footer/Footer';
+import SearchResults from './Components/SearchResult/SearchResults';
 
+function AppContent() {
+  const location = useLocation();
+  const hideLayoutRoutes = ['/']; // Hide Header & Footer on Login Page
 
-function App() {
-  const [cartItems, setCartItems] = useState([]);
+  // ✅ Load from localStorage initially (optional but good)
+  const [cartItems, setCartItems] = useState(() => {
+    const savedCart = localStorage.getItem("cartItems");
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
 
-  const handleAddToCart = (item) => {
-    setCartItems((prev) => [...prev, item]);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  // ✅ Listen for cartCleared event
+  useEffect(() => {
+    const clearCart = () => {
+      setCartItems([]);
+    };
+    window.addEventListener("cartCleared", clearCart);
+
+    return () => {
+      window.removeEventListener("cartCleared", clearCart);
+    };
+  }, []);
+
+  // ✅ Persist cart to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  // Add item to cart
+  const handleAddToCart = (newItem) => {
+    setCartItems(prevItems => {
+      const existing = prevItems.find(item => item.name === newItem.name);
+      if (existing) {
+        return prevItems.map(item =>
+          item.name === newItem.name
+            ? { ...item, quantity: item.quantity + newItem.quantity }
+            : item
+        );
+      }
+      return [...prevItems, newItem];
+    });
   };
 
-  const handleRemoveFromCart = (itemToRemove) => {
-    setCartItems((prev) => prev.filter(item => item.id !== itemToRemove.id));
+  // Change quantity (increase or decrease)
+  const handleQuantityChange = (item, delta) => {
+    setCartItems(prevItems =>
+      prevItems
+        .map(i =>
+          i.name === item.name ? { ...i, quantity: i.quantity + delta } : i
+        )
+        .filter(i => i.quantity > 0)
+    );
   };
+
   return (
-    <BrowserRouter>
-      <Header cartCount={cartItems.length} />
+    <>
+      {!hideLayoutRoutes.includes(location.pathname) && (
+        <Header
+          cartCount={cartItems.reduce((total, item) => total + item.quantity, 0)}
+          searchQuery={searchQuery}
+          setSearchQuery={setSearchQuery}
+        />
+      )}
+
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home onAddToCart={handleAddToCart} />} />
         <Route path="/about" element={<About />} />
         <Route path="/restaurantlist/:category" element={<RestaurantList onAddToCart={handleAddToCart} />} />
-        <Route path="/cart" element={<Cart cartItems={cartItems} onRemoveFromCart={handleRemoveFromCart} />} />
+        <Route
+          path="/cart"
+          element={
+            <Cart
+              cartItems={cartItems}
+              setCartItems={setCartItems}
+              onQuantityChange={handleQuantityChange}
+            />
+          }
+        />
         <Route path="/restaurantdetails/:id" element={<RestaurantDetails />} />
-        <Route path="/search" element={<SearchResults />} />
         <Route path="/checkout" element={<CheckOut />} />
-        <Route path="*" element={<h1>404 Page Not Found</h1>} />
+        <Route
+          path="/search"
+          element={
+            <SearchResults
+              onAddToCart={handleAddToCart}
+              searchQuery={searchQuery}
+              setSearchQuery={setSearchQuery}
+            />
+          }
+        />
+        <Route path="*" element={<Navigate to="/home" />} />
       </Routes>
-      <Footer />
+
+      {!hideLayoutRoutes.includes(location.pathname) && <Footer />}
+    </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppContent />
     </BrowserRouter>
   );
 }

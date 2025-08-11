@@ -11,17 +11,20 @@ function RestaurantCard({
   onClick = () => {},
   onAddToCart = () => {},
 }) {
-  const [clicked, setClicked] = useState(false); // 👉 track if button was clicked
+  const [quantity, setQuantity] = useState(0);
+
+  const handleAdd = () => {
+    if (quantity > 0) {
+      onAddToCart({ id, name, image, price, cuisine, rating, quantity });
+      setQuantity(0); // Reset after adding
+    }
+  };
 
   return (
     <div
-      className="shadow-sm rescard" 
+      className="shadow-sm rescard"
       onClick={onClick}
-      style={{
-        cursor: "pointer",
-        borderRadius: "12px",
-         
-      }}
+      style={{ cursor: "pointer", borderRadius: "12px" }}
     >
       <img
         src={image}
@@ -37,17 +40,40 @@ function RestaurantCard({
           <h5 className="title mb-1">{name}</h5>
           <h6 className="text mb-1">{cuisine}</h6>
 
+          <div className="d-flex align-items-center gap-2 mb-2">
+            <button
+              className="btn btn-outline-danger btn-sm"
+              onClick={(e) => {
+                e.stopPropagation();
+                setQuantity((q) => Math.max(0, q - 1));
+              }}
+            >
+              -
+            </button>
+            <span>{quantity}</span>
+            <button
+              className="btn btn-outline-success btn-sm"
+              onClick={(e) => {
+                e.stopPropagation();
+                setQuantity((q) => q + 1);
+              }}
+            >
+              +
+            </button>
+          </div>
+
           <button
-            className={`btn cartbutton ${clicked ? "btn-success" : "btn-warning"}`}
+            className="btn btn-success btn-sm"
             onClick={(e) => {
-              e.stopPropagation(); // prevent parent click
-              onAddToCart();
-              setClicked(true); // 👉 change color after click
+              e.stopPropagation();
+              handleAdd();
             }}
+            disabled={quantity === 0}
           >
-            {clicked ? "Added" : "Add to Cart"}
+            {quantity > 0 ? `Add ${quantity} to Cart` : "Add to Cart"}
           </button>
         </div>
+
         <div className="details">
           <p className="price mb-1 text-success fw-bold">&#8377;{price}</p>
           <h6 className="mb-0">{rating}&#9733;</h6>

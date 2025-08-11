@@ -1,21 +1,22 @@
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
-import RestaurantCard from '../RestaurantCard/RestaurantCard'; // Adjust path if needed
+import RestaurantCard from '../RestaurantCard/RestaurantCard';
 import { useNavigate } from 'react-router-dom';
+
 // Sample data
 const restaurantData = [
   {
-    id: 1, name: "Hyderabadi Biryani", price:200, cuisine: "Indian", rating: 4.5,
+    id: 1, name: "Hyderabadi Biryani", price: 200, cuisine: "Indian", rating: 4.5,
     image: "https://t3.ftcdn.net/jpg/06/08/84/24/240_F_608842413_hdYadp6uSC7c7pq6LJew9s8gPnRSgjln.jpg",
     category: "biryani"
   },
   {
-    id: 2, name: "Veg Fried Rice", price:100, cuisine: "Chinese", rating: 4.2,
+    id: 2, name: "Veg Fried Rice", price: 100, cuisine: "Chinese", rating: 4.2,
     image: "https://as2.ftcdn.net/v2/jpg/06/09/35/79/1000_F_609357995_9f5MTF73kiu6UYAtpJZRT9BFWet4l3fX.jpg",
     category: "biryani"
   },
   {
-    id: 3, name: "Paneer Biryani", price:250, cuisine: "Indian", rating: 4.3,
+    id: 3, name: "Paneer Biryani", price: 250, cuisine: "Indian", rating: 4.3,
     image: "https://t3.ftcdn.net/jpg/08/97/99/86/240_F_897998690_OVhBH6xzzmhjj0E1Hspe5BwnIfe8D8Ch.jpg",
     category: "biryani"
   },
@@ -111,15 +112,29 @@ const restaurantData = [
   }
 ];
 
-function RestaurantList({onAddToCart}) {
+function RestaurantList({ onAddToCart }) {
   const navigate = useNavigate();
   const { category } = useParams();
-  const [cart, setCart] = useState([]); // Local cart state
+  const [cart, setCart] = useState([]);
 
   const handleAddToCart = (item) => {
-    setCart((prevCart) => [...prevCart, item]); // Add to cart
+    if (!item.quantity || item.quantity <= 0) return;
+
+    setCart((prevCart) => {
+      const existingItem = prevCart.find((cartItem) => cartItem.name === item.name);
+      if (existingItem) {
+        return prevCart.map((cartItem) =>
+          cartItem.name === item.name
+            ? { ...cartItem, quantity: cartItem.quantity + item.quantity }
+            : cartItem
+        );
+      } else {
+        return [...prevCart, item];
+      }
+    });
+
     console.log("Item added to cart:", item);
-     if (onAddToCart) onAddToCart(item);
+    if (onAddToCart) onAddToCart(item);
   };
 
   const filteredRestaurants = restaurantData.filter(
@@ -131,7 +146,10 @@ function RestaurantList({onAddToCart}) {
       <div className="row">
         {filteredRestaurants.map((restaurant) => (
           <div className="col-6 col-md-4 mb-4" key={restaurant.id}>
-            <RestaurantCard {...restaurant} onAddToCart={() => handleAddToCart(restaurant)}/>
+            <RestaurantCard
+              {...restaurant}
+              onAddToCart={(itemWithQuantity) => handleAddToCart(itemWithQuantity)}
+            />
           </div>
         ))}
       </div>

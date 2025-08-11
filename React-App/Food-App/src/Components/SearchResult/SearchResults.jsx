@@ -1,16 +1,41 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import RestaurantSearchCard from "../RestaurantSearchCard/RestaurantSearchCard";
+import restaurantData from "../RestaurantData/RestaurantData";
 
-function useQuery() {
-  return new URLSearchParams(useLocation().search);
-}
+function SearchResults({ onAddToCart }) {
+  const location = useLocation();
+  const searchTerm = new URLSearchParams(location.search).get("q")?.toLowerCase() || "";
+  const [results, setResults] = useState([]);
 
-function SearchResults() {
-  const query = useQuery();
-  const searchTerm = query.get('query');
+  useEffect(() => {
+    const filtered = restaurantData.filter(item =>
+      item.name.toLowerCase().includes(searchTerm)
+    );
+    setResults(filtered);
+  }, [searchTerm]);
+
   return (
     <div className="container mt-5">
-      <h2>Search Results for "{searchTerm}"</h2>
+      <h3>Search results for: "{searchTerm}"</h3>
+      <div className="row">
+        {results.length ? (
+          results.map(item => (
+            <div key={item.id} className="col-6 col-md-4 my-3">
+              <RestaurantSearchCard
+                name={item.name}
+                image={item.image}
+                cuisine={item.cuisine}
+                price={item.price}
+                rating={item.rating}
+                onAddToCart={onAddToCart} // ✅ Corrected
+              />
+            </div>
+          ))
+        ) : (
+          <p>No items found.</p>
+        )}
+      </div>
     </div>
   );
 }

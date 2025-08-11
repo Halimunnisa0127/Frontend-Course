@@ -17,7 +17,7 @@ function Login() {
     function getsubmit() {
         console.log(UserName, password)
         if (UserName === "sk Halimunnisa" && password ==="1234") {
-            navigate('/Home')
+            navigate('/home')
         }
         else {
             alert(" In valid userName")
@@ -39,13 +39,13 @@ function Login() {
                                  
                                     <input type="text" className="form-control rounded-3" id="floatingInput"
                                         placeholder="UserName" onChange={getuserName} />
-                                    <label for="floatingInput">UserName</label>
+                                    <label htmlFor="floatingInput">UserName</label>
                                 </div>
                                 <div className="form-floating mb-3">
                                   
                                     <input type="password" className="form-control rounded-3" id="floatingPassword"
                                         placeholder="Password" onChange={getpassword} />
-                                    <label for="floatingPassword">Password</label>
+                                    <label htmlFor="floatingPassword">Password</label>
                                 </div>
                                 <button className="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit"
                                     onClick={getsubmit}>Sign up</button>
